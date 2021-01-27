@@ -12,6 +12,7 @@ func main() {
 	writeFile(f)
 }
 
+// ファイルを作成
 func createFile(s string) *os.File {
 	fmt.Println("create")
 	f, err := os.Create(s)
@@ -21,6 +22,7 @@ func createFile(s string) *os.File {
 	return f
 }
 
+//　ファイルと閉じる処理
 func closeFile(f *os.File) {
 	fmt.Println("close")
 	err := f.Close()
@@ -29,6 +31,7 @@ func closeFile(f *os.File) {
 	}
 }
 
+//　ファイルに文字を書き込む
 func writeFile(f *os.File) {
 	fmt.Println("write")
 	fmt.Fprintln(f, "defer example")
