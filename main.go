@@ -22,7 +22,7 @@ func createFile(s string) *os.File {
 	return f
 }
 
-//　ファイルと閉じる処理
+//　ファイルを閉じる処理
 func closeFile(f *os.File) {
 	fmt.Println("close")
 	err := f.Close()
